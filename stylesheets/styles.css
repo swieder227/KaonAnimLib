@@ -1,0 +1,50 @@
+/* line 7, ../sass/styles.scss */
+section {
+  /*height: 125px;*/
+  width: 100%;
+}
+
+/* line 12, ../sass/styles.scss */
+section:nth-child(even) {
+  background-color: #bfbfbf;
+}
+
+/* line 19, ../sass/styles.scss */
+section > div.row > div.columns {
+  height: 125px;
+  text-align: center;
+  vertical-align: middle;
+  display: inline-block;
+  display: -webkit-inline-box;
+  display: -moz-inline-box;
+  display: -webkit-inline-flexbox;
+  display: -ms-inline-flexbox;
+  display: -webkit-inline-flex;
+  display: inline-flex;
+  /* vertical centering for legacy, horizontal centering for modern */
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -webkit-flex-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  /* modern Flexbox only */
+  -webkit-flex-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  /* legacy Flexbox only */
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+}
+
+/* line 38, ../sass/styles.scss */
+section div.row div.columns div.button {
+  margin: 0;
+}
+/* line 39, ../sass/styles.scss */
+section div.row div.columns p {
+  margin: 0;
+}

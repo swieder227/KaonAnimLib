@@ -1,0 +1,42 @@
+@import "compass";
+@import "flexbox";
+
+// row-based layout
+$row-height: 125px;
+
+section{
+	width: 100%;
+}
+// color every-other
+section:nth-child(even){
+	background-color:#bfbfbf;
+}
+
+
+// center align, cross-browser mixins
+$flex-legacy-enabled: true;
+section>div.row>div.columns{
+  height:$row-height;
+  text-align: center;
+  vertical-align: middle;
+  display: inline-block;
+  @include display-flex(inline-flex);
+  /* vertical centering for legacy, horizontal centering for modern */
+  @include justify-content(center);
+  /* modern Flexbox only */
+  @include align-items(center);
+  /* legacy Flexbox only */
+  @include legacy-flex-direction(column);
+}
+
+// reset content inside rows
+section{
+	div.row{
+		div.columns{
+			
+			div.button{ margin: 0; }
+			p { margin: 0; }
+
+		}
+	}
+}
