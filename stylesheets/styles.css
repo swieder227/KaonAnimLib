@@ -31,18 +31,29 @@ nav .button-group {
   -moz-box-direction: normal;
 }
 
-/* line 26, ../sass/styles.scss */
+/* line 29, ../sass/styles.scss */
+nav[data-catactive="all"] .button[data-mycat="all"],
+nav[data-catactive="intros"] .button[data-mycat="intros"],
+nav[data-catactive="outros"] .button[data-mycat="outros"],
+nav[data-catactive="buttons"] .button[data-mycat="buttons"],
+nav[data-catactive="panels"] .button[data-mycat="panels"] {
+  background-color: #5da423;
+  border-color: #457a1a;
+  color: white;
+}
+
+/* line 38, ../sass/styles.scss */
 section {
   width: 100%;
   display: none;
 }
 
-/* line 31, ../sass/styles.scss */
+/* line 43, ../sass/styles.scss */
 section:nth-child(even) {
   background-color: #bfbfbf;
 }
 
-/* line 39, ../sass/styles.scss */
+/* line 51, ../sass/styles.scss */
 nav[data-catactive="all"] ~ section.all,
 nav[data-catactive="intros"] ~ section.intros,
 nav[data-catactive="outros"] ~ section.outros,
@@ -51,7 +62,7 @@ nav[data-catactive="panels"] ~ section.panels {
   display: block;
 }
 
-/* line 47, ../sass/styles.scss */
+/* line 61, ../sass/styles.scss */
 section > div.row > div.columns {
   height: 125px;
   text-align: center;
@@ -82,21 +93,21 @@ section > div.row > div.columns {
   -moz-box-direction: normal;
 }
 
-/* line 66, ../sass/styles.scss */
+/* line 80, ../sass/styles.scss */
 section div.row div.columns div.button {
   margin: 0;
 }
-/* line 67, ../sass/styles.scss */
+/* line 81, ../sass/styles.scss */
 section div.row div.columns p {
   margin: 0;
 }
 
-/* line 73, ../sass/styles.scss */
+/* line 87, ../sass/styles.scss */
 iframe {
   display: none;
 }
 
-/* line 77, ../sass/styles.scss */
+/* line 91, ../sass/styles.scss */
 textarea {
   height: 500px;
   resize: vertical;

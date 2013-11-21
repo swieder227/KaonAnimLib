@@ -20,6 +20,18 @@ nav .button-group {
   /* legacy Flexbox only */
   @include legacy-flex-direction(column);
 }
+// active category btn
+// show selected category
+nav[data-catactive="all"]     .button[data-mycat="all"],
+nav[data-catactive="intros"]  .button[data-mycat="intros"],
+nav[data-catactive="outros"]  .button[data-mycat="outros"],
+nav[data-catactive="buttons"] .button[data-mycat="buttons"],
+nav[data-catactive="panels"]  .button[data-mycat="panels"]{
+  background-color: #5da423;
+  border-color: #457a1a;
+  color: white;
+}
+
 
 // row-based layout, each section semantics = a row
 $row-height: 125px;
@@ -39,6 +51,8 @@ nav[data-catactive="buttons"] ~ section.buttons,
 nav[data-catactive="panels"]  ~ section.panels {
   display:block;
 }
+
+
 
 
 
