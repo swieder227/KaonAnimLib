@@ -25,12 +25,6 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
 	        animation-fill-mode: both;
 }
 
-.animated.hinge {
-	-webkit-animation-duration: 2s;
-	   -moz-animation-duration: 2s;
-	     -o-animation-duration: 2s;
-	        animation-duration: 2s;
-}
 
 @-webkit-keyframes flash {
 	0%, 50%, 100% {opacity: 1;}
@@ -3311,11 +3305,16 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
 }
 
 .animated.hinge {
+	-webkit-animation-duration: 2s;
+	   -moz-animation-duration: 2s;
+	     -o-animation-duration: 2s;
+	        animation-duration: 2s;
 	-webkit-animation-name: hinge;
 	-moz-animation-name: hinge;
 	-o-animation-name: hinge;
 	animation-name: hinge;
 }
+
 /* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
 
 @-webkit-keyframes rollIn {

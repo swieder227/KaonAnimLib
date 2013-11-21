@@ -13,11 +13,9 @@ function main(){
 
 		// animObj.removeClass(animName);
 
-		
+
 		var animObj = $(this).parent().siblings(".large-8").children(".exec");
 		animObj.addClass("animated");
-
-
 
 		setTimeout(function(){
 		animObj.removeClass("animated");
@@ -26,4 +24,13 @@ function main(){
 
 
 	});
+
+
+	$(".success").on("touchend", function() {
+		var name = ($(this).parent().prev().children().html());
+		var code = $("iframe").contents().find("pre").html();
+		var result = code.substring(code.indexOf(name)-19, code.lastIndexOf(name)+name.length+3);
+		$("textarea").html(result);
+	});
 }
+

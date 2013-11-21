@@ -1,15 +1,14 @@
 /* line 7, ../sass/styles.scss */
 section {
-  /*height: 125px;*/
   width: 100%;
 }
 
-/* line 12, ../sass/styles.scss */
+/* line 11, ../sass/styles.scss */
 section:nth-child(even) {
   background-color: #bfbfbf;
 }
 
-/* line 19, ../sass/styles.scss */
+/* line 18, ../sass/styles.scss */
 section > div.row > div.columns {
   height: 125px;
   text-align: center;
@@ -40,11 +39,22 @@ section > div.row > div.columns {
   -moz-box-direction: normal;
 }
 
-/* line 38, ../sass/styles.scss */
+/* line 37, ../sass/styles.scss */
 section div.row div.columns div.button {
   margin: 0;
 }
-/* line 39, ../sass/styles.scss */
+/* line 38, ../sass/styles.scss */
 section div.row div.columns p {
   margin: 0;
+}
+
+/* line 44, ../sass/styles.scss */
+iframe {
+  display: none;
+}
+
+/* line 48, ../sass/styles.scss */
+textarea {
+  height: 500px;
+  resize: vertical;
 }
