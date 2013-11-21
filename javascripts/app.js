@@ -26,11 +26,14 @@ function main(){
 	});
 
 
-	$(".success").on("touchend", function() {
+	$(".success").on("touchend", function() {		
 		var name = ($(this).parent().prev().children().html());
 		var code = $("iframe").contents().find("pre").html();
 		var result = code.substring(code.indexOf(name)-19, code.lastIndexOf(name)+name.length+3);
 		$("textarea").html(result);
 	});
+
+
+	$("iframe").attr("src","http://"+location.host+"/stylesheets/animate.css");
 }
 
