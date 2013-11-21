@@ -4,25 +4,16 @@
 function main(){	
 
 	/*
-	// Basic Animator. Add/Removes class of .animtor w/ same data attr
+	// Basic Animator. Add/Removes class of .animated to our sibling .exec
 	*/
 	$(".trigger").on("touchend",function(){
-		// var animName = $(this).attr("data-anim");
-
-		// var animObj = $(".animated[data-anim='"+animName+"']");
-
-		// animObj.removeClass(animName);
-
-
+		// find sib
 		var animObj = $(this).parent().siblings(".large-8").children(".exec");
+		// add/remove anim class
 		animObj.addClass("animated");
-
 		setTimeout(function(){
 		animObj.removeClass("animated");
 		},2500);
-
-
-
 	});
 
 
@@ -34,6 +25,13 @@ function main(){
 	});
 
 
+
 	$("iframe").attr("src","http://"+location.host+"/stylesheets/animate.css");
+
+	//within <nav>, there's a btn group. sets state via data attr.
+	$("nav .button-group .button").on("touchend",function(){
+		$("nav").attr("data-catactive",$(this).attr("data-mycat"));
+	});
+
 }
 

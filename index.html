@@ -25,16 +25,40 @@
 
 <body onload="main()">
 	<!-- Header -->
-	<div class="row">
-		<div class="large-12 columns">
-			<h2>Kaon Animation Library</h2>
-			<p>This is version 0.3</p>
-			<br/>
+	<header>
+		<div class="row">
+			<div class="columns large-12 small-12 text-center">
+				<h2>Kaon Animation Library</h2>
+				<h4><small>v0.4</small></h4>
+
+			</div>
+		</div>	
+	</header>
+	
+	<hr/>
+
+	<nav data-catactive="all">
+		<div class="row">
+			<div class="columns large-12 small-12 text-center">
+				<h4 class="subheader">Categories</h4>
+			</div>
 		</div>
-	</div>
-	
-	
-	<section>
+		<div class="row">
+			<div class="columns large-12 small-12 text-center">
+				<ul class="button-group">
+				  <li><div class="secondary button" data-mycat="all">All</div></li>
+				  <li><div class="secondary button" data-mycat="intros">Intros</div></li>
+				  <li><div class="secondary button" data-mycat="outros">Outros</div></li>
+				  <li><div class="secondary button" data-mycat="buttons">Buttons</div></li>
+				  <li><div class="secondary button" data-mycat="panels">Panels</div></li>
+				</ul>
+			</div>	
+		</div>
+	</nav>
+
+	<hr/>
+
+	<section class="all intros">
 		<div class="row">
 			<div class="columns large-2 small-6">
 				<div class="button small radius trigger">hinge</div>
@@ -47,7 +71,7 @@
 			</div>
 		</div>
 	</section>
-	<section>
+	<section class="all outros">
 		<div class="row">
 			<div class="columns large-2 small-6">
 				<div class="button small radius trigger">shake</div>
@@ -60,7 +84,7 @@
 			</div>
 		</div>
 	</section>
-	<section>
+	<section class="all outros">
 		<div class="row">
 			<div class="columns large-2 small-6">
 				<div class="button small radius trigger">swing</div>
@@ -73,7 +97,7 @@
 			</div>
 		</div>
 	</section>	
-	<section>
+	<section class="all buttons">
 		<div class="row">
 			<div class="columns large-2 small-6">
 				<div class="button small radius trigger">tada</div>

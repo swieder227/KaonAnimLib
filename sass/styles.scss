@@ -1,16 +1,45 @@
 @import "compass";
 @import "flexbox";
 
-// row-based layout
-$row-height: 125px;
+// format our header
+header, nav {
+  text-align: center;
+}
 
+header h2, header h4{
+  display: inline-block;
+}
+
+// nav content is a flexbox. centered and easy to add/remove
+nav .button-group {
+  @include display-flex(inline-flex);
+  /* vertical centering for legacy, horizontal centering for modern */
+  @include justify-content(center);
+  /* modern Flexbox only */
+  @include align-items(center);
+  /* legacy Flexbox only */
+  @include legacy-flex-direction(column);
+}
+
+// row-based layout, each section semantics = a row
+$row-height: 125px;
 section{
 	width: 100%;
+  display:none;
 }
 // color every-other
 section:nth-child(even){
 	background-color:#bfbfbf;
 }
+// show selected category
+nav[data-catactive="all"]     ~ section.all ,
+nav[data-catactive="intros"]  ~ section.intros ,
+nav[data-catactive="outros"]  ~ section.outros ,
+nav[data-catactive="buttons"] ~ section.buttons,
+nav[data-catactive="panels"]  ~ section.panels {
+  display:block;
+}
+
 
 
 // center align, cross-browser mixins

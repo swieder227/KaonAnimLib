@@ -1,14 +1,57 @@
-/* line 7, ../sass/styles.scss */
-section {
-  width: 100%;
+/* line 5, ../sass/styles.scss */
+header, nav {
+  text-align: center;
 }
 
-/* line 11, ../sass/styles.scss */
+/* line 9, ../sass/styles.scss */
+header h2, header h4 {
+  display: inline-block;
+}
+
+/* line 14, ../sass/styles.scss */
+nav .button-group {
+  display: -webkit-inline-flexbox;
+  display: -ms-inline-flexbox;
+  display: -webkit-inline-flex;
+  display: inline-flex;
+  /* vertical centering for legacy, horizontal centering for modern */
+  -webkit-flex-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  /* modern Flexbox only */
+  -webkit-flex-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  /* legacy Flexbox only */
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+}
+
+/* line 26, ../sass/styles.scss */
+section {
+  width: 100%;
+  display: none;
+}
+
+/* line 31, ../sass/styles.scss */
 section:nth-child(even) {
   background-color: #bfbfbf;
 }
 
-/* line 18, ../sass/styles.scss */
+/* line 39, ../sass/styles.scss */
+nav[data-catactive="all"] ~ section.all,
+nav[data-catactive="intros"] ~ section.intros,
+nav[data-catactive="outros"] ~ section.outros,
+nav[data-catactive="buttons"] ~ section.buttons,
+nav[data-catactive="panels"] ~ section.panels {
+  display: block;
+}
+
+/* line 47, ../sass/styles.scss */
 section > div.row > div.columns {
   height: 125px;
   text-align: center;
@@ -39,21 +82,21 @@ section > div.row > div.columns {
   -moz-box-direction: normal;
 }
 
-/* line 37, ../sass/styles.scss */
+/* line 66, ../sass/styles.scss */
 section div.row div.columns div.button {
   margin: 0;
 }
-/* line 38, ../sass/styles.scss */
+/* line 67, ../sass/styles.scss */
 section div.row div.columns p {
   margin: 0;
 }
 
-/* line 44, ../sass/styles.scss */
+/* line 73, ../sass/styles.scss */
 iframe {
   display: none;
 }
 
-/* line 48, ../sass/styles.scss */
+/* line 77, ../sass/styles.scss */
 textarea {
   height: 500px;
   resize: vertical;
