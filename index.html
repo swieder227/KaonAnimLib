@@ -1,189 +1,129 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>Kaon Animation Library</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="stylesheets/app.css"/>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/animate.css">
+    <!-- Debug LiveReload.js -->
+    <script src="http://localhost:35729/livereload.js"></script>
+    <!-- Touch Events -->
+    <script src="js/touche-min.js"></script>
+    <!-- Modernizr Browser Sniffing -->
+    <script src="bower_components/modernizr/modernizr.js"></script>
+  </head>
+  <body onload="main()">
+    
+    <!--**-->
+    <!-- Header & Nav -->
+     <header>
+      <div class="row">
+        <div class="columns large-12 small-12 text-center">
+          <h2>Kaon Animation Library</h2>
+          <h4><small>v0.4</small></h4>
+        </div>
+      </div>  
+    </header>
+    <hr/>
+    <nav data-catactive="all">
+      <div class="row">
+        <div class="columns large-12 small-12 text-center">
+          <h4 class="subheader">Categories</h4>
+        </div>
+      </div>
+      <div class="row">
+        <div class="columns large-12 small-12 text-center">
+            <div class="secondary button small" data-mycat="all">All</div>
+            <div class="secondary button small" data-mycat="intros">Intros</div>
+            <div class="secondary button small" data-mycat="outros">Outros</div>
+            <div class="secondary button small" data-mycat="buttons">Buttons</div>
+            <div class="secondary button small" data-mycat="panels">Panels</div>
+        </div>  
+      </div>
+    </nav>
+    <hr/>
 
-<!DOCTYPE html>
-<!--[if IE 8]> 				 <html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Kaon Animation Library</title>
+    <section class="all intros">
+      <div class="row">
+        <div class="columns large-2 small-6">
+          <div class="button small radius trigger animator">hinge</div>
+        </div>
+        <div class="columns large-2 small-6">
+          <div class="button small radius success" data-reveal-id="codeModal">code</div>
+        </div>
+        <div class="columns large-8">
+          <p class="exec hinge">WOOO!</p>
+        </div>
+      </div>
+    </section>
 
-  
-  <link rel="stylesheet" href="stylesheets/app.css">
-  <link rel="stylesheet" href="stylesheets/styles.css">
-  <link rel="stylesheet" href="stylesheets/animate.css">
+    <section class="all outros">
+      <div class="row">
+        <div class="columns large-2 small-6">
+          <div class="button small radius trigger animator">shake</div>
+        </div>
+        <div class="columns large-2 small-6">
+          <div class="button small radius success" data-reveal-id="codeModal">code</div>
+        </div>
+        <div class="columns large-8">
+          <p class="exec shake">WOOO!</p>
+        </div>
+      </div>
+    </section>
 
-  <script src="javascripts/app.js"></script>
-  <script src="javascripts/vendor/custom.modernizr.js"></script>
-  <script src="javascripts/vendor/touche-min.js"></script>
-
-  <!-- Debug LiveReload.js -->
-  <script src="http://localhost:35729/livereload.js"></script>
-  
-
-</head>
-
-<body onload="main()">
-	<!-- Header -->
-	<header>
-		<div class="row">
-			<div class="columns large-12 small-12 text-center">
-				<h2>Kaon Animation Library</h2>
-				<h4><small>v0.4</small></h4>
-
-			</div>
-		</div>	
-	</header>
-	
-	<hr/>
-
-	<nav data-catactive="all">
-		<div class="row">
-			<div class="columns large-12 small-12 text-center">
-				<h4 class="subheader">Categories</h4>
-			</div>
-		</div>
-		<div class="row">
-			<div class="columns large-12 small-12 text-center">
-				<ul class="button-group">
-				  <li><div class="secondary button" data-mycat="all">All</div></li>
-				  <li><div class="secondary button" data-mycat="intros">Intros</div></li>
-				  <li><div class="secondary button" data-mycat="outros">Outros</div></li>
-				  <li><div class="secondary button" data-mycat="buttons">Buttons</div></li>
-				  <li><div class="secondary button" data-mycat="panels">Panels</div></li>
-				</ul>
-			</div>	
-		</div>
-	</nav>
-
-	<hr/>
-
-	<section class="all intros">
-		<div class="row">
-			<div class="columns large-2 small-6">
-				<div class="button small radius trigger">hinge</div>
-			</div>
-			<div class="columns large-2 small-6">
-				<div class="button small radius success" data-reveal-id="codeModal">code</div>
-			</div>
-			<div class="columns large-8">
-				<p class="exec hinge">WOOO!</p>
-			</div>
-		</div>
-	</section>
-	<section class="all outros">
-		<div class="row">
-			<div class="columns large-2 small-6">
-				<div class="button small radius trigger">shake</div>
-			</div>
-			<div class="columns large-2 small-6">
-				<div class="button small radius success" data-reveal-id="codeModal">code</div>
-			</div>
-			<div class="columns large-8">
-				<p class="exec shake">WOOO!</p>
-			</div>
-		</div>
-	</section>
-	<section class="all outros">
-		<div class="row">
-			<div class="columns large-2 small-6">
-				<div class="button small radius trigger">swing</div>
-			</div>
-			<div class="columns large-2 small-6">
-				<div class="button small radius success" data-reveal-id="codeModal">code</div>
-			</div>
-			<div class="columns large-8">
-				<p class="exec swing">WOOO!</p>
-			</div>
-		</div>
-	</section>	
-	<section class="all buttons">
-		<div class="row">
-			<div class="columns large-2 small-6">
-				<div class="button small radius trigger">tada</div>
-			</div>
-			<div class="columns large-2 small-6">
-				<div class="button small radius success" data-reveal-id="codeModal">code</div>
-			</div>
-			<div class="columns large-8">
-				<p class="exec tada">WOOO!</p>
-			</div>
-		</div>
-	</section>				
+    <section class="all outros">
+      <div class="row">
+        <div class="columns large-2 small-6">
+          <div class="button small radius trigger animator">swing</div>
+        </div>
+        <div class="columns large-2 small-6">
+          <div class="button small radius success" data-reveal-id="codeModal">code</div>
+        </div>
+        <div class="columns large-8">
+          <p class="exec swing">WOOO!</p>
+        </div>
+      </div>
+    </section>
+    
+    <!--**-->
+    <!-- Buttons -->
+<!--     <section class="all buttons">
+      <div class="row">
+        <div class="columns large-2 small-6">
+          <div class="button small radius trigger buttons">tada</div>
+        </div>
+        <div class="columns large-2 small-6">
+          <div class="button small radius success" data-reveal-id="codeModal">code</div>
+        </div>
+        <div class="columns large-8">
+          <div class="adiv" href="#"><span class="buttons fa fa-circle">;)</span></div>
+        </div>
+      </div>
+    </section> -->
 
 
 
-<!--Example Animation Row-->
-<!--***-->
-<!-- 	<section>
-		<div class="row">
-			<div class="columns large-2">
-				<div class="button small radius trigger">[TITLE]</div>
-			</div>
-			<div class="columns large-2">
-				<div class="button small radius success" data-reveal-id="codeModal">code</div>
-			</div>
-			<div class="columns large-8">
-				<p class="exec [TITLE]">WOOO!</p>
-			</div>
-		</div>
-	</section>	 -->
-<!--***-->
+    <!--**-->
+    <!-- Code Pop-up -->
+    <div id="codeModal" class="reveal-modal large" data-reveal>
+      <h2>One order of code, coming up.</h2>
+      <p class="lead">Ding! Awesome.</p>
+      <textarea>Im a cool textarea that lives inside of an even cooler modal.</textarea>
+      <a class="close-reveal-modal">&#215;</a>
+    </div>
+    <!-- iframe that will contain our css text -->
+    <iframe id="codeframe" src="" sandbox="allow-same-origin allow-scripts"></iframe>
 
 
 
-	<div id="codeModal" class="reveal-modal large">
-	  <h2>One order of code, coming up.</h2>
-	  <p class="lead">Ding! Awesome.</p>
-	  <textarea>Im a cool textarea that lives inside of an even cooler modal.</textarea>
-	  
-	  <a class="close-reveal-modal">&#215;</a>
-	</div>
 
-	<!-- iframe that will contain our css text -->
-	<iframe id="codeframe" src="" sandbox="allow-same-origin allow-scripts"></iframe>
-
-  <script>
-  document.write('<script src=' +
-  ('__proto__' in {} ? 'javascripts/vendor/zepto' : 'javascripts/vendor/jquery') +
-  '.js><\/script>')
-  </script>
-  
-  <script src="javascripts/foundation/foundation.js"></script>
-	
-	<script src="javascripts/foundation/foundation.abide.js"></script>
-	
-	<script src="javascripts/foundation/foundation.alerts.js"></script>
-	
-	<script src="javascripts/foundation/foundation.clearing.js"></script>
-	
-	<script src="javascripts/foundation/foundation.cookie.js"></script>
-	
-	<script src="javascripts/foundation/foundation.dropdown.js"></script>
-	
-	<script src="javascripts/foundation/foundation.forms.js"></script>
-	
-	<script src="javascripts/foundation/foundation.interchange.js"></script>
-	
-	<script src="javascripts/foundation/foundation.joyride.js"></script>
-	
-	<script src="javascripts/foundation/foundation.magellan.js"></script>
-	
-	<script src="javascripts/foundation/foundation.orbit.js"></script>
-	
-	<script src="javascripts/foundation/foundation.placeholder.js"></script>
-	
-	<script src="javascripts/foundation/foundation.reveal.js"></script>
-	
-	<script src="javascripts/foundation/foundation.section.js"></script>
-	
-	<script src="javascripts/foundation/foundation.tooltips.js"></script>
-	
-	<script src="javascripts/foundation/foundation.topbar.js"></script>
-	
-  
-  <script>
-    $(document).foundation();
-  </script>
-</body>
+    <script src="bower_components/jquery/jquery.js"></script>
+    <script src="bower_components/foundation/js/foundation.min.js"></script>
+    <script src="js/app.js"></script>
+  </body>
 </html>

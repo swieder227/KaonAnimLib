@@ -1,37 +1,23 @@
-/* line 5, ../sass/styles.scss */
+/* line 5, ../scss/styles.scss */
 header, nav {
   text-align: center;
 }
 
-/* line 9, ../sass/styles.scss */
+/* line 9, ../scss/styles.scss */
 header h2, header h4 {
   display: inline-block;
 }
 
-/* line 14, ../sass/styles.scss */
-nav .button-group {
-  display: -webkit-inline-flexbox;
-  display: -ms-inline-flexbox;
-  display: -webkit-inline-flex;
-  display: inline-flex;
-  /* vertical centering for legacy, horizontal centering for modern */
-  -webkit-flex-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  /* modern Flexbox only */
-  -webkit-flex-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
-  /* legacy Flexbox only */
-  -webkit-box-orient: vertical;
-  -moz-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -moz-box-direction: normal;
+/* line 13, ../scss/styles.scss */
+nav {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 10;
 }
 
-/* line 29, ../sass/styles.scss */
+/* line 28, ../scss/styles.scss */
 nav[data-catactive="all"] .button[data-mycat="all"],
 nav[data-catactive="intros"] .button[data-mycat="intros"],
 nav[data-catactive="outros"] .button[data-mycat="outros"],
@@ -42,18 +28,18 @@ nav[data-catactive="panels"] .button[data-mycat="panels"] {
   color: white;
 }
 
-/* line 38, ../sass/styles.scss */
+/* line 37, ../scss/styles.scss */
 section {
   width: 100%;
   display: none;
 }
 
-/* line 43, ../sass/styles.scss */
+/* line 42, ../scss/styles.scss */
 section:nth-child(even) {
   background-color: #bfbfbf;
 }
 
-/* line 51, ../sass/styles.scss */
+/* line 50, ../scss/styles.scss */
 nav[data-catactive="all"] ~ section.all,
 nav[data-catactive="intros"] ~ section.intros,
 nav[data-catactive="outros"] ~ section.outros,
@@ -62,7 +48,7 @@ nav[data-catactive="panels"] ~ section.panels {
   display: block;
 }
 
-/* line 61, ../sass/styles.scss */
+/* line 60, ../scss/styles.scss */
 section > div.row > div.columns {
   height: 125px;
   text-align: center;
@@ -93,22 +79,136 @@ section > div.row > div.columns {
   -moz-box-direction: normal;
 }
 
-/* line 80, ../sass/styles.scss */
+/* line 79, ../scss/styles.scss */
 section div.row div.columns div.button {
   margin: 0;
 }
-/* line 81, ../sass/styles.scss */
+/* line 80, ../scss/styles.scss */
 section div.row div.columns p {
   margin: 0;
 }
 
-/* line 87, ../sass/styles.scss */
+/* line 86, ../scss/styles.scss */
 iframe {
   display: none;
 }
 
-/* line 91, ../sass/styles.scss */
+/* line 90, ../scss/styles.scss */
 textarea {
   height: 500px;
   resize: vertical;
+}
+
+/*body {
+  background: #EEE;
+  background-image: url(http://passets-ec.pinterest.com/webapp/style/app/common/images/bg-1x.11437c43.png) ;
+}*/
+/*
+.box {
+  width: 50%;
+  margin: 50px auto;
+}*/
+/* line 17, ../scss/_buttons.scss */
+h1 {
+  color: #BBB;
+  text-align: center;
+  text-shadow: 0 1px #FFF, 0 -1px #AAA;
+}
+
+/* line 23, ../scss/_buttons.scss */
+div.adiv, .wide-btn {
+  display: inline-block;
+  margin: 10px;
+  width: 80px;
+  height: 80px;
+  border: 1px solid #EEE;
+  border-radius: 50%;
+  text-decoration: none;
+  background: #cecece;
+  /* Old browsers */
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#cecece), color-stop(0.99, white));
+  background: -webkit-linear-gradient(#cecece 0%, white 99%);
+  background: -moz-linear-gradient(#cecece 0%, white 99%);
+  background: -o-linear-gradient(#cecece 0%, white 99%);
+  background: linear-gradient(#cecece 0%, #ffffff 99%);
+  /* FF3.6+ */
+  /* Chrome,Safari4+ */
+  /* Chrome10+,Safari5.1+ */
+  /* Opera 11.10+ */
+  /* IE10+ */
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cecece', endColorstr='#ffffff',GradientType=0 );
+  /* IE6-9 */
+}
+
+/* line 40, ../scss/_buttons.scss */
+span {
+  display: block;
+  width: 80%;
+  height: 80%;
+  margin: 11% 10%;
+  background: #ffffff;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, white 0%, #e0e0e0 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(100%, #e0e0e0));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, white 0%, #e0e0e0 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, white 0%, #e0e0e0 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, white 0%, #e0e0e0 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #ffffff 0%, #e0e0e0 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e0e0e0',GradientType=0 );
+  /* IE6-9 */
+  text-align: center;
+  border-radius: 50%;
+  font-size: 30px;
+  color: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px #AAA, 0 1px #ccc, 0 -2px #FFF;
+  -webkit-transition: all .25s;
+  -moz-transition: all .25s;
+  -ms-transition: all .25s;
+  -o-transition: all .25s;
+  transition: all .25s;
+  text-shadow: 0 1px rgba(255, 255, 255, 0.9);
+  line-height: 64px !important;
+}
+
+/* line 67, ../scss/_buttons.scss */
+span.txt {
+  line-height: 16px !important;
+  letter-spacing: -1px;
+  font-size: 16px;
+  font-weight: bold;
+  padding-top: 13px;
+}
+
+/* line 78, ../scss/_buttons.scss */
+div.adiv:active span,
+div.adiv.active span {
+  color: rgba(0, 0, 0, 0.5);
+  text-shadow: 0 1px rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 0 #FFF, 0 1px #CCC, 0 0 #FFF;
+}
+
+/* line 85, ../scss/_buttons.scss */
+div.adiv:hover,
+div.adiv.hover {
+  box-shadow: 0 0 3px #FFF, 0 3px #CCC, 2px 0 #eee, -2px 0 #EEE;
+}
+
+/* line 90, ../scss/_buttons.scss */
+div.adiv:hover span,
+div.adiv.hover span {
+  color: rgba(150, 0, 0, 0.5);
+}
+
+/* line 94, ../scss/_buttons.scss */
+.line {
+  margin: 15px 0;
+  border-top: 2px solid #CCC;
+  border-bottom: 1px solid #FFF;
 }

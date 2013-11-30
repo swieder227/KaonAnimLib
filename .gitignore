@@ -1,7 +1,4 @@
-.DS_Store
-
-*.scssc
-
-compass_app_log.txt
-
-.sass-cache
+/bower_components/*
+/.sass-cache/*
+*.DS_Store
+/stylesheets/*
