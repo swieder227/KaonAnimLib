@@ -2,7 +2,7 @@
 
 A collection of animations and presents to be used and shared in development.
 
-### Developed on [Foundation v5](http://foundation.zurb.com/docs/) w/ HTML5/[SASS](sass-lang.com/)/JS
+### Developed on [Foundation v5](http://foundation.zurb.com/docs/) w/ HTML5/[SASS](http://sass-lang.com/)/JS
 
 ###Foundaton Install Requirements:
 
