@@ -1,4 +1,4 @@
-#Kaon Animation Library
+#Kaon UI Library
 
 A collection of animations and presents to be used and shared in development.
 

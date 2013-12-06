@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
-    <title>Kaon Animation Library</title>
+    <title>Kaon UI Library</title>
     <!-- CSS -->
     <link rel="stylesheet" href="stylesheets/app.css"/>
     <link rel="stylesheet" href="stylesheets/styles.css">
@@ -22,8 +22,8 @@
      <header>
       <div class="row">
         <div class="columns large-12 small-12 text-center">
-          <h2>Kaon Animation Library</h2>
-          <h4><small>v0.4</small></h4>
+          <h2>Kaon UI Library</h2>
+          <h4><small>v0.5</small></h4>
         </div>
       </div>  
     </header>
@@ -37,8 +37,8 @@
       <div class="row">
         <div class="columns large-12 small-12 text-center">
             <div class="secondary button small" data-mycat="all">All</div>
-            <div class="secondary button small" data-mycat="intros">Intros</div>
-            <div class="secondary button small" data-mycat="outros">Outros</div>
+            <div class="secondary button small" data-mycat="trans">Transitions</div>
+            <div class="secondary button small" data-mycat="effects">Effects</div>
             <div class="secondary button small" data-mycat="buttons">Buttons</div>
             <div class="secondary button small" data-mycat="panels">Panels</div>
         </div>  
@@ -46,79 +46,85 @@
     </nav>
     <hr/>
 
-
-    <section class="all intros">
+    <!--**-->
+    <!-- Effects -->
+    <section class="all effects">
       <div class="row">
         <div class="columns large-2 small-6">
-          <div class="button small radius trigger animator">hinge</div>
+          <p>Hinge</p>
         </div>
-        <div class="columns large-2 small-6">
-          <div class="button small radius success" data-reveal-id="codeModal">code</div>
+        <div class="columns large-4 small-6">
+          <div class="button small radius trigger animator" data-target="exec" data-anims="animated hinge" data-dur="2000">Animate</div>
         </div>
-        <div class="columns large-8">
-          <p class="exec hinge">WOOO!</p>
+        <div class="columns large-6 small-12 execParent">
+          <p class="exec"><img src="img/demo_logo.png"></p>
         </div>
       </div>
     </section>
 
-    <section class="all outros">
+    <section class="all effects">
       <div class="row">
         <div class="columns large-2 small-6">
-          <div class="button small radius trigger animator">shake</div>
+          <p>Shake</p>
         </div>
-        <div class="columns large-2 small-6">
-          <div class="button small radius success" data-reveal-id="codeModal">code</div>
+        <div class="columns large-4 small-6">
+          <div class="button small radius trigger animator" data-target="exec" data-anims="animated shake" data-dur="2000">Animate</div>
         </div>
-        <div class="columns large-8">
-          <p class="exec shake">WOOO!</p>
+        <div class="columns large-6 small-12 execParent">
+          <p class="exec"><img src="img/demo_logo.png"></p>
         </div>
       </div>
     </section>
 
-    <section class="all outros">
+    <section class="all effects">
       <div class="row">
         <div class="columns large-2 small-6">
-          <div class="button small radius trigger animator">swing</div>
+          <p>Swing</p>
         </div>
-        <div class="columns large-2 small-6">
-          <div class="button small radius success" data-reveal-id="codeModal">code</div>
+        <div class="columns large-4 small-6">
+          <div class="button small radius trigger animator" data-target="exec" data-anims="animated swing" data-dur="2000">Animate</div>
         </div>
-        <div class="columns large-8">
-          <p class="exec swing">WOOO!</p>
+        <div class="columns large-6 small-12 execParent">
+          <p class="exec"><img src="img/demo_logo.png"></p>
         </div>
       </div>
     </section>
     
     <!--**-->
-    <!-- Buttons -->
-<!--     <section class="all buttons">
+    <!-- Transition -->
+    <section class="all trans">
       <div class="row">
         <div class="columns large-2 small-6">
-          <div class="button small radius trigger buttons">tada</div>
+          <p>Bounce In</p>
         </div>
-        <div class="columns large-2 small-6">
-          <div class="button small radius success" data-reveal-id="codeModal">code</div>
+        <div class="columns large-4 small-6">
+          <div class="button small radius trigger animator" data-target="exec" data-anims="animated bounceIn" data-dur="2000">bounceIn</div>
+          <div class="button small radius trigger animator" data-target="exec" data-anims="animated bounceInUp" data-dur="2000">bounceInUp</div>
         </div>
-        <div class="columns large-8">
-          <div class="adiv" href="#"><span class="buttons fa fa-circle">;)</span></div>
+        <div class="columns large-6 small-12 execParent">
+          <p class="exec"><img src="img/demo_logo.png"></p>
         </div>
       </div>
-    </section> -->
+    </section>
 
 
 
     <!--**-->
-    <!-- Code Pop-up -->
-    <div id="codeModal" class="reveal-modal large" data-reveal>
-      <h2>One order of code, coming up.</h2>
-      <p class="lead">Ding! Awesome.</p>
-      <textarea>Im a cool textarea that lives inside of an even cooler modal.</textarea>
-      <a class="close-reveal-modal">&#215;</a>
-    </div>
-    <!-- iframe that will contain our css text -->
-    <iframe id="codeframe" src="" sandbox="allow-same-origin allow-scripts"></iframe>
-
-
+    <!-- Buttons -->
+    <section class="all buttons">
+      <div class="row">
+        <div class="columns large-2 small-6">
+          <p>Nuclear Reactor</p>
+        </div>
+        <div class="columns large-4 small-6">
+          <div class="button small radius trigger animator" data-target="adiv" data-anims="hover" data-dur="500">Hover</div>
+          <div class="button small radius trigger animator" data-target="adiv" data-anims="hover active" data-dur="1000">Press</div>
+        </div>
+        <div class="columns large-6 small-12 execParent">
+          <div class="adiv exec" href="#"><span class=""><img src="img/demo_icon.png" style="width: 30px; height:30px; margin-bottom:6px;"></span></div>
+        </div>
+      </div>
+    </section>
 
 
     <script src="bower_components/jquery/jquery.js"></script>

@@ -22,8 +22,8 @@ nav{
 // active category btn
 // show selected category
 nav[data-catactive="all"]     .button[data-mycat="all"],
-nav[data-catactive="intros"]  .button[data-mycat="intros"],
-nav[data-catactive="outros"]  .button[data-mycat="outros"],
+nav[data-catactive="trans"]  .button[data-mycat="trans"],
+nav[data-catactive="effects"]  .button[data-mycat="effects"],
 nav[data-catactive="buttons"] .button[data-mycat="buttons"],
 nav[data-catactive="panels"]  .button[data-mycat="panels"]{
   background-color: #5da423;
@@ -32,8 +32,7 @@ nav[data-catactive="panels"]  .button[data-mycat="panels"]{
 }
 
 
-// row-based layout, each section semantics = a row
-$row-height: 125px;
+// row-based layout
 section{
 	width: 100%;
   display:none;
@@ -44,8 +43,8 @@ section:nth-child(even){
 }
 // show selected category
 nav[data-catactive="all"]     ~ section.all ,
-nav[data-catactive="intros"]  ~ section.intros ,
-nav[data-catactive="outros"]  ~ section.outros ,
+nav[data-catactive="trans"]   ~ section.trans,
+nav[data-catactive="effects"] ~ section.effects,
 nav[data-catactive="buttons"] ~ section.buttons,
 nav[data-catactive="panels"]  ~ section.panels {
   display:block;
@@ -54,7 +53,7 @@ nav[data-catactive="panels"]  ~ section.panels {
 
 
 
-
+$row-height: 125px;
 // center align, cross-browser mixins
 $flex-legacy-enabled: true;
 section>div.row>div.columns{
